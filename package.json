@@ -1,0 +1,24 @@
+{
+  "name": "m3ae5---abp5---bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bootstrap.bundle.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xTouzen/M3AE5-ABPRO5-bootstrap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/xTouzen/M3AE5-ABPRO5-bootstrap/issues"
+  },
+  "homepage": "https://github.com/xTouzen/M3AE5-ABPRO5-bootstrap#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.7"
+  }
+}

@@ -3,13 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="bootstrap.min.css" />
-    <script src="bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="../src/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="../public/js/global.js"></script>
     <title>Bazaar</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">Bazaar</a>
           <button
@@ -33,22 +38,29 @@
               </li>
             </ul>
           </div>
+          <div class="ms-auto d-flex align-items-center">
+            <button id="soundToggle" class="btn btn-outline-light">
+              <i id="soundIcon" class="bi bi-volume-up-fill"></i>
+            </button>
+          </div>
         </div>
       </nav>
     </header>
+    <audio id="backgroundAudio" src="../assets/audio/10 Shop.mp3" loop></audio>
+
     <main class="container my-5">
-      <h1 class="text-center mb-5">Nuestros Productos</h1>
+      <h1 class="text-center mb-5 fw-bold">Nuestros Productos</h1>
 
       <div class="row g-4">
         <div class="col-sm-6 col-md-3">
-          <div class="card h-100 shadow-sm">
+          <div class="card h-100 bg-card">
             <img
-              src="assets/img/RecoveryHeart.png"
+              src="../assets/img/RecoveryHeart.png"
               class="card-img-top"
               alt="Producto 1"
             />
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title text-center ">Corazón</h5>
+              <h5 class="card-title text-center">Corazón</h5>
               <p class="card-text flex-grow-1">
                 Esto rellenará instantáneamente un contenedor de corazón.
               </p>
@@ -59,118 +71,125 @@
         </div>
 
         <div class="col-sm-6 col-md-3">
-          <div class="card h-100 shadow-sm">
+          <div class="card h-100 bg-card">
             <img
-              src="assets/img/Deku_Stick.png"
+              src="../assets/img/Deku_Stick.png"
               class="card-img-top"
               alt="Producto 1"
             />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title text-center">Palo Deku</h5>
               <p class="card-text flex-grow-1">
-                Una rama larga del Gran Árbol Deku. Puedes usarla como arma, pero se romperá.
+                Una rama larga del Gran Árbol Deku. Puedes usarla como arma,
+                pero se romperá.
               </p>
-              <h4 class="fw-bold text-center ">10 Rupias</h4>
+              <h4 class="fw-bold text-center">10 Rupias</h4>
               <a href="#" class="btn btn-primary mt-auto">Comprar</a>
             </div>
           </div>
         </div>
-                <div class="col-sm-6 col-md-3">
-          <div class="card h-100 shadow-sm">
+        <div class="col-sm-6 col-md-3">
+          <div class="card h-100 bg-card">
             <img
-              src="assets/img/Deku-Nut-Large.png"
+              src="../assets/img/Deku-Nut-Large.png"
               class="card-img-top"
               alt="Producto 1"
             />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title text-center">Nuez Deku (5)</h5>
               <p class="card-text flex-grow-1">
-                Lánzalas para aturdir a tus enemigos. Solo puedes llevar una cantidad limitada.
+                Lánzalas para aturdir a tus enemigos. Solo puedes llevar una
+                cantidad limitada.
               </p>
               <h4 class="fw-bold text-center">15 Rupias</h4>
               <a href="#" class="btn btn-primary mt-auto">Comprar</a>
             </div>
           </div>
         </div>
-                <div class="col-sm-6 col-md-3">
-          <div class="card h-100 shadow-sm">
+        <div class="col-sm-6 col-md-3">
+          <div class="card h-100 bg-card">
             <img
-              src="assets/img/BombG_Large.png"
+              src="../assets/img/BombG_Large.png"
               class="card-img-top"
               alt="Producto 1"
             />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title text-center">Bomba (5)</h5>
               <p class="card-text flex-grow-1">
-                Sácalo con (C) y pulsa (C) de nuevo para lanzarlo. No puedes comprarlos sin una bolsa bomba..
+                Sácalo con (C) y pulsa (C) de nuevo para lanzarlo. No puedes
+                comprarlos sin una bolsa bomba..
               </p>
               <h4 class="fw-bold text-center">35 Rupias</h4>
               <a href="#" class="btn btn-primary mt-auto">Comprar</a>
             </div>
           </div>
         </div>
-                <div class="col-sm-6 col-md-3">
-          <div class="card h-100 shadow-sm">
+        <div class="col-sm-6 col-md-3">
+          <div class="card h-100 bg-card">
             <img
-              src="assets/img/Hylian_Shield_OoT.png"
+              src="../assets/img/Hylian_Shield_OoT.png"
               class="card-img-top"
               alt="Producto 1"
             />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title text-center">Escudo Hyliano</h5>
               <p class="card-text flex-grow-1">
-                Este es un escudo grande y pesado, como los que usan los Caballeros Hylianos. ¡Resiste ataques de fuego!.
+                Este es un escudo grande y pesado, como los que usan los
+                Caballeros Hylianos. ¡Resiste ataques de fuego!.
               </p>
               <h4 class="fw-bold text-center">80 Rupias</h4>
               <a href="#" class="btn btn-primary mt-auto">Comprar</a>
             </div>
           </div>
         </div>
-                <div class="col-sm-6 col-md-3">
-          <div class="card h-100 shadow-sm">
+        <div class="col-sm-6 col-md-3">
+          <div class="card h-100 bg-card">
             <img
-              src="assets/img/ArrowsG_Large.png"
+              src="../assets/img/ArrowsG_Large.png"
               class="card-img-top"
               alt="Producto 1"
             />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title text-center">Flechas (10)</h5>
               <p class="card-text flex-grow-1">
-                Necesitas un arco para dispararles. No puedes comprarlos a menos que tengas un arco.
+                Necesitas un arco para dispararles. No puedes comprarlos a menos
+                que tengas un arco.
               </p>
               <h4 class="fw-bold text-center">10 Rupias</h4>
               <a href="#" class="btn btn-primary mt-auto">Comprar</a>
             </div>
           </div>
         </div>
-                <div class="col-sm-6 col-md-3">
-          <div class="card h-100 shadow-sm">
+        <div class="col-sm-6 col-md-3">
+          <div class="card h-100 bg-card">
             <img
-              src="assets/img/ArrowsG_Large.png"
+              src="../assets/img/ArrowsG_Large.png"
               class="card-img-top"
               alt="Producto 1"
             />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title text-center">Flechas (30)</h5>
               <p class="card-text flex-grow-1">
-                Necesitas un arco para dispararlas. No puedes comprarlos a menos que tengas un arco.
+                Necesitas un arco para dispararlas. No puedes comprarlos a menos
+                que tengas un arco.
               </p>
               <h4 class="fw-bold text-center">10 Rupias</h4>
               <a href="#" class="btn btn-primary mt-auto">Comprar</a>
             </div>
           </div>
         </div>
-                <div class="col-sm-6 col-md-3">
-          <div class="card h-100 shadow-sm">
+        <div class="col-sm-6 col-md-3">
+          <div class="card h-100 bg-card">
             <img
-              src="assets/img/ArrowsG_Large.png"
+              src="../assets/img/ArrowsG_Large.png"
               class="card-img-top"
               alt="Producto 1"
             />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title text-center">Flechas (50)</h5>
               <p class="card-text flex-grow-1">
-                Necesitas un arco para dispararlas. No puedes comprarlos a menos que tengas un arco.
+                Necesitas un arco para dispararlas. No puedes comprarlos a menos
+                que tengas un arco.
               </p>
               <h4 class="fw-bold text-center">10 Rupias</h4>
               <a href="#" class="btn btn-primary mt-auto">Comprar</a>
@@ -180,13 +199,12 @@
       </div>
     </main>
 
-    <footer class="bg-body-tertiary text-center text-lg-start fixed-bottom">
+    <footer class="text-center text-lg-start">
       <div
         class="text-center p-3"
         style="background-color: rgba(0, 0, 0, 0.05)"
       >
-        © 2025 Copyright:
-        <a class="text-body" href="#">Legend of zelda: Ocarina of time</a>
+        © 2025 Copyright: Legend of zelda: Ocarina of time
       </div>
     </footer>
   </body>
