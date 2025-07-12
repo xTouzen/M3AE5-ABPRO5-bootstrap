@@ -1,0 +1,6 @@
+@use '../abstracts/variables';
+
+.btn {
+  font-family: variables.$font-family-base;
+  @include transition(background-color);
+}

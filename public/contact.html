@@ -3,13 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="bootstrap.min.css" />
-    <script src="bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="../src/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="../public/js/global.js"></script>
     <title>Bazaar</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">Bazaar</a>
           <button
@@ -33,16 +38,22 @@
               </li>
             </ul>
           </div>
+          <div class="ms-auto d-flex align-items-center">
+            <button id="soundToggle" class="btn btn-outline-light">
+              <i id="soundIcon" class="bi bi-volume-up-fill"></i>
+            </button>
+          </div>
         </div>
       </nav>
     </header>
+    <audio id="backgroundAudio" src="../assets/audio/10 Shop.mp3" loop></audio>
 
     <main>
       <section>
         <div class="container py-5">
-          <h1 class="text-center mb-4">Contáctanos</h1>
+          <h1 class="text-center mb-4 fw-bold">Contáctanos</h1>
 
-          <form id="contactForm" class="bg-white p-4 shadow rounded">
+          <form id="contactForm" class="p-4 shadow rounded">
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre</label>
               <input
@@ -132,13 +143,12 @@
       </section>
     </main>
 
-    <footer class="bg-body-tertiary text-center text-lg-start fixed-bottom">
+    <footer class="text-center text-lg-start">
       <div
         class="text-center p-3"
         style="background-color: rgba(0, 0, 0, 0.05)"
       >
-        © 2025 Copyright:
-        <a class="text-body" href="#">Legend of zelda: Ocarina of time</a>
+        © 2025 Copyright: Legend of zelda: Ocarina of time
       </div>
     </footer>
 
@@ -160,7 +170,7 @@
 
         if (nombre && correo && comentario) {
           modalSuccess.show();
-          form.reset(); 
+          form.reset();
         } else {
           modalError.show();
         }

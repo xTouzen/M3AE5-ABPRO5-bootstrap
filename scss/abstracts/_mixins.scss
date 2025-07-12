@@ -1,0 +1,10 @@
+
+
+@mixin spacing($margin: 1rem, $padding: 1rem) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $ease: ease-in-out) {
+  transition: $property $duration $ease;
+}

@@ -1,0 +1,24 @@
+@use "../abstracts/variables" ;
+
+header {
+  background-color: variables.$color-header;
+  color: white;
+
+  .navbar-brand,
+  .nav-link,
+  .btn-outline-light {
+    color: white;
+
+    &:hover {
+      color: lighten(white, 20%);
+    }
+  }
+
+  .navbar-toggler-icon {
+    filter: brightness(0) invert(1); 
+  }
+}
+
+nav {
+  color:white;
+}

@@ -1,0 +1,23 @@
+@use '../abstracts/variables';
+
+.bg-card {
+  background-color: variables.$color-card;
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+
+  img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.11); 
+    opacity: 0.5;         
+  }
+}
+
+form {
+  background-color: variables.$color-card;
+}
